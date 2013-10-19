@@ -1,0 +1,18 @@
+<template name="clientele">
+    <section class="columns large-12">
+        <dl class="sub-nav hide-on-print">
+            <dd data-bind="css:{active: currentSelection() === 'All'}">
+                <a href="#" data-bind="click: setSelection">All</a>
+            </dd>
+            <dd data-bind="css:{active: currentSelection() === 'Artwork'}">
+                <a href="#" data-bind="click: setSelection">Artwork</a>
+            </dd>
+            <dd data-bind="css:{active: currentSelection() === 'Websites'}">
+                <a href="#" data-bind="click: setSelection">Websites</a>
+            </dd>
+        </dl>
+        <ul class="small-block-grid-2 large-block-grid-4" data-bind="foreach: {data:items, afterRender:Utils.Animate.addItems}">
+            <li><a class="th" href="#"><img data-bind="attr:{src:src}"></a></li>
+        </ul>
+    </section>
+</template>

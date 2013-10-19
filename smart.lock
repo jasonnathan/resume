@@ -1,0 +1,32 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "foundation": {},
+      "font-awesome": {},
+      "knockout-client-pager": {}
+    },
+    "packages": {
+      "foundation": {
+        "git": "https://github.com/ewall/meteor-foundation.git",
+        "tag": "v4.3.2",
+        "commit": "4cd0dc6ac5c69bf7477917a836d9078262d273a0"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v3.2.1",
+        "commit": "38bdfff72dfb8857b272f9a9b056045d6a015489"
+      },
+      "knockout-client-pager": {
+        "git": "https://github.com/zhouzhuojie/knockout-client-pager.git",
+        "tag": "v0.0.3",
+        "commit": "255fb32a55e798a6fc3a13bd21558ac664de1894"
+      },
+      "knockout-client": {
+        "git": "https://github.com/zhouzhuojie/knockout-client.git",
+        "tag": "v0.0.2",
+        "commit": "550e9293ab933573db8661c780839ba056f3d883"
+      }
+    }
+  }
+}
