@@ -51,8 +51,8 @@ if (Meteor.isClient) {
         $('.filter').on('click', function() {
             var e = $(this);
             e.parent.find('filter').removeClass('active');
-            e.addClass('active')
-        })
+            e.addClass('active');
+        });
     };
     Template.clientele.destroyed = function() {
         ko.cleanNode(this.firstNode);
@@ -102,26 +102,26 @@ if (Meteor.isClient) {
             }
         });
         ko.applyBindings(contact, this.find('#contactFromBlock'));
-    }
+    };
 
     Template.setup.rendered = function() {
 
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
             i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
+                (i[r].q = i[r].q || []).push(arguments);
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
                     m = s.getElementsByTagName(o)[0];
             a.async = 1;
             a.src = g;
-            m.parentNode.insertBefore(a, m)
+            m.parentNode.insertBefore(a, m);
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-2433084-18', 'jasonnathan.com');
         ga('send', 'pageview');
 
-    }
+    };
 
     Meteor.startup(function() {
         _init();
@@ -137,11 +137,11 @@ function _init() {
             .from($('.nameHeader'), 1, {left: "-100%", ease: Back.easeInOut}, '-=.3')
             .from($('.profileThumb'), 1, {scale: .5, ease: Back.easeInOut}, '-=.3')
             .from($('.about'), 1, {scale: .1, opacity: 0,  ease: Back.easeInOut}, '-=.5')
-            .from($('.contact-block'), 1, {opacity: 0, rotation: "-80deg", scale: 1.8, ease: Back.easeOut}, 0.2)
+            .from($('.contact-block'), 1, {opacity: 0, rotation: "-80deg", scale: 1.8, ease: Back.easeOut}, 0.2);
 
     meters.each(function() {
         var e = $(this), pw = e.parent().width(), cw = e.attr('data-decimal') * pw;
-        tl.to(this, .05, {x: cw + 'px', ease: Back.easeInOut})
+        tl.to(this, .05, {x: cw + 'px', ease: Back.easeInOut});
     });
 
     tl.restart();
