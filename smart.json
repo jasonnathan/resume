@@ -2,10 +2,6 @@
   "packages": {
     "foundation": {},
     "font-awesome": {},
-    "knockout-client-pager": {},
-    "fancybox": {
-      "git": "git@github.com:matteodem/meteor-fancybox.git"
-    },
     "gsap": {}
   }
 }

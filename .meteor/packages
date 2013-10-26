@@ -9,11 +9,8 @@ preserve-inputs
 
 foundation
 font-awesome
-knockout-client-pager
-knockout-client
 less
 
-fancybox
 spiderable
 jquery
 webapp
