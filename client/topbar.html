@@ -1,9 +1,74 @@
 <template name="topbar">
-    <dl class="sub-nav hide-on-print">
+    <dl class="sub-nav hide-on-print hide-for-small">
         <dd>
             <a onclick="return window.print(), !1;" class="button secondary small print" href="#">
                 <i class="icon-print"></i> Print CV
             </a>
         </dd>
+        {{>contactForm}}
     </dl>
+</template>
+
+<template name="contactForm">
+    <dd>
+        <a  class="button secondary small print" href="#contactFromBlock" id="contactFromButton">
+            <i class="icon-mail-forward"></i> Send Message
+        </a>
+    </dd>
+    <div id="contactFromBlock" style="display:none">
+        <h3><i class="icon-mail-forward"></i> Send me an email.</h3>
+        <p>
+            If you'd like to contact me, please fill out this form.
+        </p>
+
+        <div class="alert-box success" data-bind="visible:successMessage">
+            <p data-bind="text:successMessage"></p>
+        </div>
+
+        <div data-bind="visible:!successMessage()">
+            <div class="row">
+                <div class="small-11">
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="name" class="right inline">Name</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input type="text"  id="name" data-bind="value: name" placeholder="Enter Your Name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="number" class="right inline">Contact</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input type="text" id="number" data-bind="value: number" placeholder="Enter Your Contact Number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="email" class="right inline">Email</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input type="email" id="email" data-bind="value: email, valueUpdate:'afterkeydown', css:{error:errorMessage}" placeholder="Enter Your Email">
+                            <small class="error" data-bind="visible:errorMessage">Please enter a valid email addresss</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="message" class="right inline">Message</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <textarea name="message" data-bind="value:message" placeholder="Enter Your Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-6">
+                            <a data-bind="click: submitMessage" href="#" id="submitEmail" class="button postfix radius no-shadow">Submit</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

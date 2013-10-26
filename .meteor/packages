@@ -3,7 +3,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-standard-app-packages
 autopublish
 insecure
 preserve-inputs
@@ -12,3 +11,14 @@ foundation
 font-awesome
 knockout-client-pager
 knockout-client
+less
+
+fancybox
+spiderable
+jquery
+webapp
+templating
+email
+standard-app-packages
+
+gsap

@@ -4,7 +4,12 @@
     "basePackages": {
       "foundation": {},
       "font-awesome": {},
-      "knockout-client-pager": {}
+      "knockout-client-pager": {},
+      "fancybox": {
+        "git": "git@github.com:matteodem/meteor-fancybox.git",
+        "branch": "master"
+      },
+      "gsap": {}
     },
     "packages": {
       "foundation": {
@@ -21,6 +26,16 @@
         "git": "https://github.com/zhouzhuojie/knockout-client-pager.git",
         "tag": "v0.0.3",
         "commit": "255fb32a55e798a6fc3a13bd21558ac664de1894"
+      },
+      "fancybox": {
+        "git": "git@github.com:matteodem/meteor-fancybox.git",
+        "branch": "master",
+        "commit": "e348bedd9facfee0b1623fd3be1299b9ea4c578d"
+      },
+      "gsap": {
+        "git": "https://github.com/RoyalMist/meteor-gsap.git",
+        "tag": "v1.9.8release",
+        "commit": "9d3c296bc4cf8fbc21090b443d0826cc3a727412"
       },
       "knockout-client": {
         "git": "https://github.com/zhouzhuojie/knockout-client.git",

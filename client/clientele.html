@@ -1,18 +1,103 @@
 <template name="clientele">
     <section class="columns large-12">
         <dl class="sub-nav hide-on-print">
-            <dd data-bind="css:{active: currentSelection() === 'All'}">
-                <a href="#" data-bind="click: setSelection">All</a>
-            </dd>
-            <dd data-bind="css:{active: currentSelection() === 'Artwork'}">
-                <a href="#" data-bind="click: setSelection">Artwork</a>
-            </dd>
-            <dd data-bind="css:{active: currentSelection() === 'Websites'}">
-                <a href="#" data-bind="click: setSelection">Websites</a>
-            </dd>
+            <dd class="filter active" data-filter="all"><a href="#" onclick="return false;">All</a></dd>
+            <dd class="filter" data-filter="experiments"><a href="#" onclick="return false;">Experiments</a></dd>
+            <dd class="filter" data-filter="websites"><a href="#" onclick="return false;">Sites</a></dd>
+            <dd class="filter" data-filter="adminstrator"><a href="#" onclick="return false;">Admin</a></dd>
         </dl>
-        <ul class="small-block-grid-2 large-block-grid-4" data-bind="foreach: {data:items, afterRender:Utils.Animate.addItems}">
-            <li><a class="th" href="#"><img data-bind="attr:{src:src}"></a></li>
+        <ul id="grid">
+            <li class="mix all experiments">
+                <div class="view view-first">
+                    <img src="/clock.png" alt="CSS3 Clock by Jason Nathan">
+                    <div class="mask">
+                        <h6>CSS Clock</h6>
+                        <p>A CSS3 only clock</p>
+                        <a href="http://css3-clock.jasonnathan.com" class="various fancybox.iframe info"><i class="icon-search"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="mix all websited">
+                <div class="view view-first">
+                    <img src="/SGMobile2.png" alt="Responsive HTML">
+                    <div class="mask">
+                        <h6>Responsive HTML</h6>
+                        <p>Converted existing client site to pure responsive HTML in 3 hours :)</p>
+                        <a href="http://sgmlogo.meteor.com" class="various fancybox.iframe info"><i class="icon-search"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="mix all adminstrator websites">{{>realtasia}}</li>
+            <li class="mix all experiments websites">
+                <div class="view view-first">
+                    <img src="/jasonnathan.png" alt="3D Portfolio">
+                    <div class="mask">
+                        <h6>3D Portfolio</h6>
+                        <p>A CSS3/ Javascript Animated experiment</p>
+                        <a href="http://www.jasonnathan.com" class="info" target="_blank"><i class="icon-search"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="mix all adminstrator websites">
+                <div class="view view-first">
+                    <img src="/royedelstein.png" alt="Personal Blog Site">
+                    <div class="mask">
+                        <h6>Personal Blog Site</h6>
+                        <p>Administrator, AWS, WordPress</p>
+                        <a href="http://www.royedelstein.com" class="various fancybox.iframe info"><i class="icon-search"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="mix adminstrator websites">
+                <div class="view view-first">
+                    <img src="/themeomania.png" alt="Animated Portfolio by Jason Nathan">
+                    <div class="mask">
+                        <h6>Kid's Party Planners</h6>
+                        <p>Administrator, AWS, WordPress</p>
+                        <a href="http://www.themeomania.com" class="various fancybox.iframe info"><i class="icon-search"></i></a>
+                    </div>
+                </div>
+            </li>
         </ul>
     </section>
+</template>
+
+<template name="realtasia">
+    <div>
+        <div class="view view-first">
+            <img src="/realtasia.png" alt="Social Network Site">
+            <div class="mask">
+                <h6>Social Network Site</h6>
+                <p>Designer, Administrator, AWS, MongoDB</p>
+                <a href="#followup" id="followupPopup"  class="info"><i class="icon-search"></i></a>
+            </div>
+        </div>
+        <div id="followup" style="display:none;">
+            <h3><i class="icon-info-sign"></i> Oops! Page Pending.</h3>
+            <p>
+                Please check back to see a <b>video tour</b> of RealtAsia's social network website.
+                You can also subscribe via email. A link will be sent to your email once the video is complete.
+            </p>
+
+            <div class="alert-box success" data-bind="visible:successMessage">
+                <p data-bind="text:successMessage"></p>
+            </div>
+
+            <div class="row collapse" data-bind="visible:!successMessage()">
+                <div class="small-3 large-2 columns">
+                    <span class="prefix">Email</span>
+                </div>
+                <div class="small-6 large-8 columns">
+                    <input type="email" placeholder="Enter your email address" data-bind="value: email, valueUpdate:'afterkeydown', css:{error:errorMessage}">
+                    <small class="error" data-bind="visible:errorMessage">Please enter a valid email addresss</small>
+                </div>
+                <div class="small-3 large-2 columns">
+                    <a data-bind="click:submitEmail" href="#" id="submitEmail" class="button postfix radius no-shadow">Submit</a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
 </template>
