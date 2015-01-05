@@ -1,19 +1,19 @@
 html, body{
-    font-family: 'Quattrocento Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6{font-family: 'Julius Sans One', sans-serif;}
 body{
     /*.transition(all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000));*/
     /*background:#ddd;*/
-    font-size: 1.1em;
+    // font-size: 1.1em;
     background-image: url(/snow2.png);
     background-size: auto;
     background-repeat: repeat repeat;
     text-shadow: 1px 1px 1px #fff;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
 }
-@import "hover.import.less";
+
 a{color:#555;}
 .main-container{
     position:relative;margin-top:5px;
@@ -94,19 +94,23 @@ p.about{
 
 
 .fieldset {
-    border-bottom:5px solid @bold-blue;padding:0;margin:20px 0 20px 0;
-    h4 {
+    border-bottom:1px solid transparent;
+    padding:0;margin:20px 0 20px 0;
+    h2{
+        color:#fff;
+        margin:0;
         padding:3px 25px;min-width:200px;
         text-shadow: -1px -1px 1px #666;
         background: @dark-blue;
     }
 }
 .contact-block {
-    top:2px;
+    top:0;
     position: relative;
-    h4{
+    h2{
         background-color: #444;
-        padding:5px 25px;color:#fff;
+        margin:0;
+        padding:3px 25px;color:#fff;
         .no-shadow;
     }
     li>a{color:#555;}
@@ -285,8 +289,19 @@ p.about{
         -webkit-transition-delay: 0.2s;
     }
 @media only screen{
+    h2{
+        font-size:2rem;
+    }
+    h3{
+        font-size:1.5rem;
+        margin:0 auto 1rem auto !important;
+    }
+    h6{
+        font-weight: normal;
+    }
     .contact-block{
-        background: @lighter-blue;margin-top:-68px;
+        background: @lighter-blue;
+        .effect7;
         li, li > a{
             color:#555 !important;
             text-shadow:1px 1px 1px #C8EEFF;
@@ -308,17 +323,21 @@ p.about{
 }
 
 @media only print {
-    body{font-size:11px;}
+    body{font-size:13px;}
     .darkgray .meter {
         background-color:#666 !important;-webkit-print-color-adjust: exact;
         margin-top:-5px;
     }
-    .fieldset{border-width:1px;}
+    .fieldset{border-width:1px;
+        h2{
+          margin-left:0;  
+        }
+    }
     .progress{height:10px;}
     .contact-block{margin:0 !important;padding:0;}
     .contact-block h4{margin:0 !important;}
     p.about{padding:0 !important;display:inline !important;}
-    p.about br {display: none;}
+    // p.about br {display: none;}
 }
 
 .transition(@args){
@@ -377,11 +396,7 @@ p.about{
     }
 }
 
-/*Effects!*/
-#resume-info{
-    .hover-shadow;
-}
 #employment{
-    margin: auto 20px !important;
+    margin: auto;
 }
 @import "timeline.import.less";

@@ -1,3 +1,4 @@
+@media only screen{
 .cbp_tmtimeline {
   margin: 30px auto;
   padding: 0;
@@ -14,7 +15,7 @@
   bottom: 0;
   width: 10px;
   background: #afdcf8;
-  left: 16.7%;
+  left: 14.6%;
   margin-left: -10px;
 }
 
@@ -25,8 +26,8 @@
 
 .cbp_tmtimeline > li .cbp_tmtime {
   display: block;
-  width: 20%;
-  padding-right: 50px;
+  width: 10%;
+  // padding-right: 50px;
   position: absolute;
 }
 
@@ -53,7 +54,8 @@
 
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
-  margin: 0 0 15px 23%;
+  .effect7;
+  margin: 0 0 15px 20%;
   background: @dark-blue;
   color: #fff;
   padding: 2em;
@@ -61,7 +63,7 @@
   font-weight: 300;
   line-height: 1.4;
   position: relative;
-  border-radius: 5px;
+  // border-radius: 5px;
   h3{
     text-shadow:none;
     color:#fff;
@@ -111,7 +113,7 @@
   font-weight: bold;
   font-variant: normal;
   text-transform: none;
-  font-size: 1.2em;
+  font-size: 1rem;
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
   position: absolute;
@@ -120,12 +122,13 @@
   border-radius: 50%;
   box-shadow: 0 0 0 8px @lighter-blue;
   text-align: center;
-  left: 16%;
+  left: 14%;
   top: 0;
   margin: 0 0 0 -25px;
   text-shadow:1px 1px 1px #398BBA;
 }
 
+}
 /* Example Media Queries */
 @media screen and (max-width: 65.375em) {
 
@@ -172,4 +175,34 @@
       margin: -55px 5px 0 0px;
     }
   }
+}
+
+@media only print{
+
+  .cbp_tmtimeline{
+    list-style:none;
+    li{position:relative;}
+    ul > li {
+      margin-left:100px;
+    }
+    h3{
+      margin:20px 0 10px 100px;
+    }
+    h6{
+      line-height:1rem;
+      margin-left:100px;
+      margin-bottom:1rem;
+    }
+    time, .cbp_tmicon{
+      max-width:50px;
+      display:inline-block;
+      
+      position:absolute;
+      top:0;
+    }
+    .cbp_tmicon{
+      left:50px;
+    }
+  }  
+
 }
