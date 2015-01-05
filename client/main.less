@@ -1,6 +1,5 @@
-html, body
-{
-    font-family: 'Open Sans', sans-serif;
+html, body{
+    font-family: 'Quattrocento Sans', sans-serif;
     overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6{font-family: 'Julius Sans One', sans-serif;}
@@ -12,7 +11,9 @@ body{
     background-size: auto;
     background-repeat: repeat repeat;
     text-shadow: 1px 1px 1px #fff;
+    font-family: 'Open Sans', sans-serif;
 }
+@import "hover.import.less";
 a{color:#555;}
 .main-container{
     position:relative;margin-top:5px;
@@ -30,13 +31,15 @@ a{color:#555;}
 }
 
 p.about{
+    display: block;
     background: #fff;
-    box-shadow: 1px 1px 15px #eee inset;
-    padding:10px;
+    padding:1rem;
+    .effect7;
 }
 
 .nameHeader{
-    font-weight:normal;color:@dark-blue;margin-bottom:0
+    font-weight:normal;color:@bold-blue;margin-bottom:0;
+    font-size:2em;
 }
 .positionHeader{
     font-weight: normal;margin:0 0 20px 15px;color:#000;
@@ -55,7 +58,8 @@ p.about{
     dd.active > a{text-shadow: none;}
 }
 .side-nav {
-    margin:auto 1em;
+    margin:auto 1rem;
+    list-style: none;
     i {
         width:20px !important;display:inline-block;text-align:center;
     }
@@ -81,20 +85,29 @@ p.about{
     margin-bottom: 0.625em;
     text-shadow: 1px 1px 1px #fff;
 }
-.progress{height:15px;background-color: #fff;border-color:#f5f5f5;box-shadow: 1px 1px 1px #ccc inset;}
-
-
-.fieldset {
-    border-bottom:5px solid @dark-blue;padding:0;margin:20px 0 20px 0;
-    h4 {
-        padding:3px 25px;min-width:200px;
-        text-shadow: -1px -1px 1px #666;
+.progress{
+    height:15px;background-color: #fff;border-color:#f5f5f5;box-shadow: 1px 1px 1px #ccc inset;
+    .meter{
         background: @dark-blue;
     }
 }
+
+
+.fieldset {
+    border-bottom:5px solid @bold-blue;padding:0;margin:20px 0 20px 0;
+    h4 {
+        padding:3px 25px;min-width:200px;
+        text-shadow: -1px -1px 1px #666;
+        background: @bold-blue;
+    }
+}
 .contact-block {
+    top:2px;
+    position: relative;
     h4{
-        background-color: #444;padding:4px 25px;color:#fff;.no-shadow;
+        background-color: #444;
+        padding:5px 25px;color:#fff;
+        .no-shadow;
     }
     li>a{color:#555;}
 }
@@ -122,12 +135,12 @@ p.about{
     height:15px !important;
     margin-top: -3px;
     background: rgb(122,188,255); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, @dark-blue 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,@dark-blue)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@dark-blue 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@dark-blue 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@dark-blue 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@dark-blue 100%); /* W3C */
+    background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, @bold-blue 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,@bold-blue)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@bold-blue 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@bold-blue 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@bold-blue 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,@bold-blue 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
 }
 
@@ -183,6 +196,10 @@ p.about{
         top: 0;
         left: 0
     }
+    .mask {
+    width:280px;
+    height:180px;
+    }
     img {
         display: block;
         position: relative
@@ -213,8 +230,8 @@ p.about{
         font-size:.8em;
         text-decoration: none;
         padding: 5px;
-        right:21px;
-        bottom:21px;
+        right:5px;
+        bottom:5px;
         min-width:50px;
         background: #000;
         color: #fff;
@@ -269,7 +286,11 @@ p.about{
     }
 @media only screen{
     .contact-block{
-        background:#e6e1dd;margin-top:-68px;
+        background: @lighter-blue;margin-top:-68px;
+        li, li > a{
+            color:#555 !important;
+            text-shadow:1px 1px 1px #C8EEFF;
+        }
     }
     .positionHeader{margin-top:-10px !important;}
 }
@@ -330,4 +351,35 @@ p.about{
 
 .no-shadow{text-shadow: none;}
 
-@dark-blue : rgba(64,150,238,1);
+@bold-blue: #00A2FF;
+@dark-blue: #3594cb;
+@light-blue: #6cbfee;
+@lighter-blue:#afdcf8;
+
+.effect7
+{
+    position:relative;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    &:before, &:after{
+        content:"";
+        position:absolute;
+        z-index:-1;
+        // box-shadow:0 0 20px rgba(0,0,0,0.3);
+        top:0;
+        bottom:0;
+        left:1px;
+        right:1px;
+    }
+    &:after{
+        // right:10px;
+        left:auto;
+        transform:skew(8deg) rotate(3deg);
+    }
+}
+
+/*Effects!*/
+#resume-info{
+    .hover-shadow;
+}
+
+@import "timeline.import.less";
