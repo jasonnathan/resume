@@ -3,171 +3,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="keywords" content="web design,web designer,web design singapore,web design singapore,html design,html5 design,singapore web designer,singapore web design,singapore web design,web design companies,html5 designer," />
     <meta name="description" content="A talented Web Designer, Server Adminstrator based in Sunny Singapore." />
-    <link href='//fonts.googleapis.com/css?family=Julius+Sans+One|Quicksand' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-    <div class="row main-container">
-        <!--<div class="binder"></div>-->
-        <div class="small-12 large-12 columns main-content">
-            {{> interactiveButton}}
-            <div itemscope itemtype="http://schema.org/Person">
-                <div class="block">
-                    <h1 class="nameHeader">
+    <link href='//fonts.googleapis.com/css?family=Julius+Sans+One|Lato' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="row main-container">
+            <!--<div class="binder"></div>-->
+            <div class="main-content">
+                <a class="button tiny alert hide-on-print no-shadow" href="#interactiveModal" id="resume-info" style="float:right;font-size:14px;">
+                    <span><b><i class="fa fa-info-circle"></i></b> <span class="hide-for-small">Interactive CV</span></span>
+                </a>
+                <div class="pageBreak" itemscope itemtype="http://schema.org/Person">
+                    <div class="block">
+                        <h1 class="nameHeader">
                         <img itemprop="image" class="profileThumb" src="https://s.gravatar.com/avatar/bc75373d96f89523c87f373888c348eb?s=100">
                         <span itemprop="name">Jason <strong>Nathan</strong></span>
                         <span class="positionHeader">Developer. Designer. Administrator.</span>
-                    </h1>
-                </div>
-                {{> topbar}}
-                <div class="fieldset">
-                    <h2>About</h2>
-                </div>
-                <section class="row">
-                    <div class="large-8 columns">
-                        <p class="about" itemprop="description">
+                        </h1>
+                    </div>
+                    {{> topbar}}
+                    <div class="fieldset">
+                        <h2>Overview</h2>
+                    </div>
+                    <section class="row">
+                        <div class="large-8 columns">
+                            <p class="about" itemprop="description">
                             A burgeoning entrepreneur and service-oriented professional whose passion lies in innovation, brand development and sales. Possesses over ten years of experience in Information Technology and has an outgoing personality. Commands an immense flair for
                             communication skills to connect with a wide range of audiences.
                             <br>
                             <br> Driven to be self-trained, displays enthusiasm when exploring new ideas and excels beyond paper qualifications. A captivating and charismatic presenter of ideas and a valuable asset to his team. A natural leader who can inspire,
                             nurture and produce results.
-                        </p>
+                            </p>
+                        </div>
+                        <div class="large-4 columns">
+                            <aside class="contact-block">
+                                <h2>Contact</h2>
+                                <ul class="side-nav">
+                                    <li>
+                                        <a itemprop="email" href="mailto:jjnathanjr@gmail.com"><i class="fa fa-envelope"></i> jjnathanjr@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <a itemprop="telephone" href="tel:+6592320417"><i class="fa fa-phone"></i> +65 92320417</a>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="http://www.jasonnathan.com"><i class="fa fa-globe"></i> www.jasonnathan.com</a>
+                                    </li>
+                                    <li>
+                                        <a itemprop="birthDate" href="#"><i class="fa fa-calendar"></i> April 14<sup>th</sup>, 1981 [34]</a>
+                                    </li>
+                                    <li>
+                                        <a itemprop="nationality" href="#"><i class="fa fa-map-marker"></i> North-Central, Singapore</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </section>
+                </div>
+                <div>
+                    <div id="skillblock" class="pageBreak">
+                        <div class="fieldset">
+                            <h2 id="skillset">Skills & Workflow</h2>
+                        </div>
+                        <section class="row">
+                            <div class="columns small-12 relative">
+                                <h5>About</h5>
+                                <blockquote>
+                                    I use Git for version control, deploy apps on Github & Bitbucket and try very hard to answer questions on StackOverflow. I use a Test Driven Development (TDD) approach for larger project development. I write in half a dozen programming languages & scripts. I have created Windows Apps, Android Apps and Web Apps. I love Databases & Analytics. Mostly though, I absolutely enjoy creating User Interfaces & Experiences.
+                                </blockquote>
+                                <br>
+                            </div>
+                        </section>
+                        <section class="row">
+                            <div class="columns large-6 small-12 skill-labels">
+                                <h5>Languages / Applications</h5>
+                                <div class="skill row">
+                                    <div class="columns small-3">{{> progressBar number="0.9"}}</div>
+                                    <div class="columns small-9 relative">
+                                        <h4>JavaScript</h4>
+                                        <p>
+                                        Full stack OOP <strong>NodeJS</strong> development (including <strong>MeteorJS</strong>, <strong>PhantomJS</strong> & <strong>Socket.IO</strong> .)<br>
+                                        Well-versed with front-end tech like <strong>jQuery</strong>, <strong>KnockoutJS </strong> .<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="skill row">
+                                    <div class="columns small-3">{{> progressBar number="0.9"}}</div>
+                                    <div class="columns small-9 relative">
+                                        <h4>PHP</h4>
+                                        <p>
+                                        Highly Proficient in PHP & many related frameworks (including <strong>KohanaPHP</strong>, <strong>Composer</strong> .)<br>
+                                        Advanced <strong>WordPress</strong> Developer & Designer (Custom themes, plugins. Uses <strong>WP-API</strong> to create cool Apps)<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="skill row">
+                                    <div class="columns small-3">{{> progressBar number="0.95"}}</div>
+                                    <div class="columns small-9 relative">
+                                        <h4>HTML/CSS</h4>
+                                        <p>
+                                        Hand Coded HTML5 && CSS3. Ability to reproduce valid HTML & CSS from JPEG image!<br>
+                                        CSS frameworks like <strong>Bootstrap</strong>, <strong>Foundation</strong> & <strong>Ionic</strong><br>
+                                        Indulges in many modern techniques (<strong>SVG</strong>, <strong>Animations</strong>, <strong>FlexBox</strong> . )
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns large-6 small-12 skill-labels">
+                                <h5>DBs / Servers / Cloud Services</h5>
+                                <div class="skill row">
+                                    <div class="columns small-3">{{> progressBar number="0.8"}}</div>
+                                    <div class="columns small-9 relative">
+                                        <h4>Web Servers</h4>
+                                        <p>
+                                        Set up countless server configs (inlcuding <strong>proxies</strong>, <strong>load balancers</strong> & <strong>URL mapping</strong>).<br>
+                                        Comfortable popular web servers (<strong>Nginx</strong>, <strong>NodeJS</strong> & <strong>Apache</strong> .)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="skill row">
+                                    <div class="columns small-3">{{> progressBar number="0.85"}}</div>
+                                    <div class="columns small-9 relative">
+                                        <h4>Databases</h4>
+                                        <p>
+                                        Strong foundation in <strong>SQL</strong> in various flavours. Active <strong>Cypher</strong> User. Proficient in numerous <strong>ORMs</strong> & <strong>ODMs</strong> in JS & PHP. <br>
+                                        Vast DB exposure (including <strong>MySQL</strong>, <strong>MongoDB</strong>, <strong>Neo4j</strong> etc). Very interested in Big Data & Data Analytics.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="skill row">
+                                    <div class="columns small-3">{{> progressBar number="0.85"}}</div>
+                                    <div class="columns small-9 relative">
+                                        <h4>Cloud Services</h4>
+                                        <p>
+                                        Succesfully deployed multitier server configurations in <strong>AWS</strong>,
+                                        <strong>Microsoft Azure</strong> & <strong>Digital Ocean</strong>. Created & maintained Auto-Scale set ups, Load Balancings & Monitoring Apps.
+                                        <strong>Ubuntu Desktop</strong> User but comfortable with all Linux flavours including <strong>CentOS</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                    <div class="large-4 columns">
-                        <aside class="contact-block">
-                            <h2>Contact</h2>
-                            <ul class="side-nav">
-                                <li><a itemprop="email" href="mailto:jjnathanjr@gmail.com"><i class="fa fa-envelope"></i> jjnathanjr@gmail.com</a>
+                    <div id="employmentblock" class="pageBreak">
+                        <div class="fieldset">
+                            <h2 id="employmentHeader">Employment</h2>
+                        </div>
+                        <section class="row" id="employment">
+                            <ul class="columns small-12 large-12 cbp_tmtimeline">
+                                {{> employmentDetails}}
+                            </ul>
+                            <!-- <ul class="columns small-12 large-4 side-nav"></ul> -->
+                        </section>
+                    </div>
+                    <div id="edublock" class="pageBreak">
+                        <div class="fieldset">
+                            <h2>Education</h2>
+                        </div>
+                        <section class="row">
+                            <ul class="columns small-12 side-nav">
+                                <li>
+                                    <label class="label beige">2005</label> <span>Diploma in Financial Planning <span class="subheader">- Singapore College of Insurance</span></span>
                                 </li>
-                                <li><a itemprop="telephone" href="tel:+6592320417"><i class="fa fa-phone"></i> +65 92320417</a>
+                                <li>
+                                    <label class="label beige">2002</label> <span>Completed Modules <span data-tooltip class="has-tip" title="Rules and Regulations for Financial Advisory Services">5</span> & <span data-tooltip class="has-tip" title="Life Insurance and Investment-linked Policies">9</span>                            and <span data-tooltip class="has-tip" title="Certificate in Health Insurance">HI</span> of <span data-tooltip class="has-tip" title="CMFAS - Capital Markets and Financial Advisory Services. <br>Mandatory certification for Financial Advisers in Singapore">CMFAS</span>                            <span class="subheader">- Singapore College of Insurance</span></span>
                                 </li>
-                                <li><a itemprop="url" href="http://www.jasonnathan.com"><i class="fa fa-globe"></i> www.jasonnathan.com</a>
+                                <li>
+                                    <label class="label beige">1998</label> <span>Certificate in <span class="has-tip" data-tooltip title="dBase programming language">Fundamentals of Database Administration</span> <span class="subheader">- Informatics</span></span>
                                 </li>
-                                <li><a itemprop="birthDate" href="#"><i class="fa fa-calendar"></i> April 14<sup>th</sup>, 1981 [34]</a>
+                                <li>
+                                    <label class="label beige">1997</label> <span>GCE 'O' Levels <span class="subheader">- Pioneer Secondary School</span></span>
                                 </li>
-                                <li><a itemprop="nationality" href="#"><i class="fa fa-map-marker"></i> North-Central, Singapore</a>
+                                <li>
+                                    <label class="label beige">1996</label> <span>Certificate in <span class="has-tip" data-tooltip title="PC Hardware Troubleshooting, Repair & Build">PC Maintenance</span> <span class="subheader">- Informatics</span></span>
                                 </li>
                             </ul>
-                        </aside>
-                    </div>
-                </section>
-            </div>
-            <div>
-                <div class="fieldset">
-                    <h2 id="skillset">Skillset</h2>
-                </div>
-                <section class="row">
-                    <div class="columns large-6 small-12 skill-labels">
-                        <h5>Languages / Frameworks / Applications</h5>
-                        <div class="skill row">
-                            <div class="columns small-3">{{> progressBar number="0.9"}}</div>
-                            <div class="columns small-9">
-                                <h4>JavaScript</h4>
-                                <p>With the exception of PHP & .NET related projects, Nearly all work is written in JS. This also includes desktop & mobile apps. This page is an example of a <a href="https://www.meteor.com" rel="nofollow" target="_blank">MeteorJS</a> app.
-                                I work with front-end & back-end JS and I relentlessly try to ensure that only a single development language is ever needed in a project lifecycle</p>
-                                <span class="label info">NodeJS</span>
+                        </section>
+                        <footer class="row">
+                            <div class="columns large-12 text-center">
+                                <p>This website was handwritten in <i style="font-size: 1.2em;" data-tooltip title="HTML5" class="has-tip tip-top fa fa-html5"></i> & <i data-tooltip title="CSS3" class="has-tip tip-top fa fa-css3"></i> and lives entirely within a
+                                <a href="http://www.meteor.com/" target="_blank">meteor</a> / <a href="http://nodejs.org/" target="_blank">Node JS</a> application container.</p>
+                                <p class="show-for-print hide"><small>Portfolio Items are not shown in this version of the CV. An up-to-date version is always at <strong>http://resume.jasonnathan.com</strong></small>
+                                </p>
+                                <small><em><p>Copyright&copy; 2013-2015 Jason Nathan.</p></em></small>
                             </div>
-                        </div>
-                        <label data-tooltip title="Proficiency: 8/10"><b>CSS</b> (CSS3, Boostrap, Foundation, Gumby)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".8" style="width:80%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 8/10"><b>HTML</b> (HTML5, XML)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".8" style="width:80%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 9/10"><b>PHP</b> (WordPress, Kohana, Zend, Codeignitor)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".9" style="width:90%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 6/10"><b>.NET</b> (VB, C#)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".55" style="width:60%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 7/10"><b>Adobe</b> (Ps, Dw, Ai)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".7" style="width:70%"></span>
-                        </div>
+                        </footer>
                     </div>
-                    <div class="columns large-6 small-12 skill-labels">
-                        <h5>Operating Sys / Databases / Cloud Services</h5>
-                        <label data-tooltip title="Proficiency: 7/10"><b>Web Servers</b> (Apache, Nginx, Node.js)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".7" style="width:70%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 7.5/10"><b>Databases</b> (MySQL, MSSQL, MongoDB)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".75" style="width:75%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 7/10"><b>Amazon Web Services</b> (Cloud Services)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".7" style="width:70%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 6/10"><b>Windows Azure</b> (Cloud Services)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".6" style="width:60%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 7/10"><b>Windows OS</b> (XP / Vista / 7 / 8)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".7" style="width:70%"></span>
-                        </div>
-                        <label data-tooltip title="Proficiency: 7.5/10"><b>Linux</b> (Debian, Ubuntu, Linux Mint)</label>
-                        <div class="progress darkgray"><span class="meter" data-decimal=".75" style="width:75%"></span>
-                        </div>
-                    </div>
-                </section>
-                <!--                 <div class="fieldset hide-on-print">
-                    <h4>Works</h4>
-                </div> -->
-                <!--                 <section class="row hide-on-print" id="clientele">
-                </section> -->
-                <div class="fieldset">
-                    <h2 id="employmentHeader">Employment</h2>
                 </div>
-                <section class="row" id="employment">
-                    <ul class="columns small-12 large-12 cbp_tmtimeline">
-                        {{> employmentDetails}}
-                    </ul>
-                    <ul class="columns small-12 large-4 side-nav"></ul>
-                </section>
-                <div class="fieldset">
-                    <h2>Education</h2>
-                </div>
-                <section class="row">
-                    <ul class="columns small-12 side-nav">
-                        <li>
-                            <label class="label beige">2005</label> <span>Diploma in Financial Planning <span class="subheader">- Singapore College of Insurance</span></span>
-                        </li>
-                        <li>
-                            <label class="label beige">2002</label> <span>Completed Modules <span data-tooltip class="has-tip" title="Rules and Regulations for Financial Advisory Services">5</span> & <span data-tooltip class="has-tip" title="Life Insurance and Investment-linked Policies">9</span>                            and <span data-tooltip class="has-tip" title="Certificate in Health Insurance">HI</span> of <span data-tooltip class="has-tip" title="CMFAS - Capital Markets and Financial Advisory Services. <br>Mandatory certification for Financial Advisers in Singapore">CMFAS</span>                            <span class="subheader">- Singapore College of Insurance</span></span>
-                        </li>
-                        <li>
-                            <label class="label beige">1998</label> <span>Certificate in <span class="has-tip" data-tooltip title="dBase programming language">Fundamentals of Database Administration</span> <span class="subheader">- Informatics</span></span>
-                        </li>
-                        <li>
-                            <label class="label beige">1997</label> <span>GCE 'O' Levels <span class="subheader">- Pioneer Secondary School</span></span>
-                        </li>
-                        <li>
-                            <label class="label beige">1996</label> <span>Certificate in <span class="has-tip" data-tooltip title="PC Hardware Troubleshooting, Repair & Build">PC Maintenance</span> <span class="subheader">- Informatics</span></span>
-                        </li>
-                    </ul>
-                </section>
-                <footer class="row">
-                    <div class="columns large-12 text-center">
-                        <p>This website was handwritten in <i style="font-size: 1.2em;" data-tooltip title="HTML5" class="has-tip tip-top fa fa-html5"></i> & <i data-tooltip title="CSS3" class="has-tip tip-top fa fa-css3"></i> and lives entirely within a
-                            <a href="http://www.meteor.com/" target="_blank">meteor</a> / <a href="http://nodejs.org/" target="_blank">Node JS</a> application container.</p>
-                        <p class="show-for-print hide"><small>Portfolio Items are not shown in this version of the CV. An up-to-date version is always at http://resume.jasonnathan.com</small>
-                        </p>
-                        <small><em><p>Copyright&copy; 2013-2015 Jason Nathan.</p></em></small>
-                    </div>
-                </footer>
             </div>
         </div>
-    </div>
-    {{> setup}}
-</body>
-
-<template name="interactiveButton" style="display:none;">
-    <a class="button tiny alert hide-on-print no-shadow" href="#interactiveModal" id="resume-info" style="float:right;font-size:14px;">
-        <span><b><i class="fa fa-info-circle"></i></b> <span class="hide-for-small">Interactive CV</span></span>
-    </a>
-    <div id="interactiveModal" style="display: none;">
-        <h2>This page is interactive.</h2>
-        <p class="lead">Hover over or touch items to reveal more information.</p>
-        <p>
-            I created this because I felt that there was very little one can visualise on paper. This website works in all devices but is very much work in progress. Check back for updates as I fill up my portfolio with more media! I hope you enjoy exploring as much
-            as I did creating. :)
-        </p>
-    </div>
-</template>
-<template name="setup"></template>
+        {{> interactiveButton}}
+        {{> setup}}
+    </body>
+    <template name="interactiveButton">
+        <div class="md-modal md-effect-19" id="interactiveModal">
+            <div class="md-content">
+                <h3>This page is interactive.</h3>
+                <div>
+                    <p class="lead">Hover over or touch items to reveal more information.</p>
+                    <p>
+                    I created this because I felt that there was very little one can visualise on paper. This website works in all devices but is very much work in progress. Check back for updates as I fill up my portfolio with more media! I hope you enjoy exploring as much
+                    as I did creating. :)
+                    </p>
+                    <button class="md-close">Close me!</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template name="setup">
+        <div class="md-overlay"></div>
+    </template>

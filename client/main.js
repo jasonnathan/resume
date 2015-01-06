@@ -1,25 +1,58 @@
+Meteor.startup(function() {
+  //$('html').addClass('md-perspective');
+});
+
 if (Meteor.isClient) {
   var contact = new Contact;
   // Interactive Button
   Template.interactiveButton.rendered = function() {
-    $('#resume-info').fancybox({
-      fitToView: true,
-      autoSize: true,
-      autoResize: true,
-      maxWidth: '550px',
-      height: '100%',
-      openEffect: 'elastic',
-      closeEffect: 'elastic',
-      helpers: {
-        overlay: {
-          locked: false
-        },
-        title: "Welcome to my interactive resume"
+    // $('#resume-info').fancybox({
+    //   fitToView: true,
+    //   autoSize: true,
+    //   autoResize: true,
+    //   autoResize: true,
+    //   maxWidth: '550px',
+    //   height: '100%',
+    //   openEffect: 'elastic',
+    //   closeEffect: 'elastic',
+    //   helpers: {
+    //     overlay: {
+    //       locked: false
+    //     },
+    //     title: "Welcome to my interactive resume"
+    //   },
+    //   afterClose: function() {
+    //     contact.successMessage(null);
+    //   }
+    // });
+
+    var overlay = $('.md-overlay'),
+      modal = this.$("#interactiveModal"),
+      clicker = $('#resume-info'),
+      closer = this.$('.md-close'),
+      removeModal = function(hasPerspective) {
+        modal.removeClass('md-show');
+        hasPerspective && $('html').removeClass('md-perspective');
       },
-      afterClose: function() {
-        contact.successMessage(null);
-      }
+      removeHandler = function(e) {
+        if (e)
+          e.preventDefault();
+
+        return removeModal($(document.documentElement).hasClass('md-perspective'));
+      };
+
+    clicker.on('click', function(e) {
+      e.preventDefault();
+      modal.addClass('md-show');
+      overlay.on('click', removeHandler);
+      Meteor.setTimeout(function() {
+        $(document.documentElement).addClass('md-perspective');
+      }, 25);
+
     });
+
+    closer.on('click', removeHandler);
+
   };
 
   // Clientelle Template
