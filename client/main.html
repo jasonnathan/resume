@@ -6,7 +6,7 @@
     <link href='//fonts.googleapis.com/css?family=Julius+Sans+One|Lato' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div class="row main-container">
+        <div class="main-container container">
             <!--<div class="binder"></div>-->
             <div class="main-content">
                 <a class="button tiny alert hide-on-print no-shadow" href="#interactiveModal" id="resume-info" style="float:right;font-size:14px;">
@@ -64,7 +64,7 @@
                             <h2 id="skillset">Skills & Workflow</h2>
                         </div>
                         <section class="row">
-                            <div class="columns small-12 relative">
+                            <div class="columns small-12">
                                 <h5>About</h5>
                                 <blockquote>
                                     I use Git for version control, deploy apps on Github & Bitbucket and try very hard to answer questions on StackOverflow. I use a Test Driven Development (TDD) approach for larger project development. I write in half a dozen programming languages & scripts. I have created Windows Apps, Android Apps and Web Apps. I love Databases & Analytics. Mostly though, I absolutely enjoy creating User Interfaces & Experiences.
@@ -73,74 +73,7 @@
                             </div>
                         </section>
                         <section class="row">
-                            <div class="columns large-6 small-12 skill-labels">
-                                <h5>Languages / Applications</h5>
-                                <div class="skill row">
-                                    <div class="columns small-3">{{> progressBar number="0.9"}}</div>
-                                    <div class="columns small-9 relative">
-                                        <h4>JavaScript</h4>
-                                        <p>
-                                        Full stack OOP <strong>NodeJS</strong> development (including <strong>MeteorJS</strong>, <strong>PhantomJS</strong> & <strong>Socket.IO</strong> .)<br>
-                                        Well-versed with front-end tech like <strong>jQuery</strong>, <strong>KnockoutJS </strong> .<br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="skill row">
-                                    <div class="columns small-3">{{> progressBar number="0.9"}}</div>
-                                    <div class="columns small-9 relative">
-                                        <h4>PHP</h4>
-                                        <p>
-                                        Highly Proficient in PHP & many related frameworks (including <strong>KohanaPHP</strong>, <strong>Composer</strong> .)<br>
-                                        Advanced <strong>WordPress</strong> Developer & Designer (Custom themes, plugins. Uses <strong>WP-API</strong> to create cool Apps)<br>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="skill row">
-                                    <div class="columns small-3">{{> progressBar number="0.95"}}</div>
-                                    <div class="columns small-9 relative">
-                                        <h4>HTML/CSS</h4>
-                                        <p>
-                                        Hand Coded HTML5 && CSS3. Ability to reproduce valid HTML & CSS from JPEG image!<br>
-                                        CSS frameworks like <strong>Bootstrap</strong>, <strong>Foundation</strong> & <strong>Ionic</strong><br>
-                                        Indulges in many modern techniques (<strong>SVG</strong>, <strong>Animations</strong>, <strong>FlexBox</strong> . )
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="columns large-6 small-12 skill-labels">
-                                <h5>DBs / Servers / Cloud Services</h5>
-                                <div class="skill row">
-                                    <div class="columns small-3">{{> progressBar number="0.8"}}</div>
-                                    <div class="columns small-9 relative">
-                                        <h4>Web Servers</h4>
-                                        <p>
-                                        Set up countless server configs (inlcuding <strong>proxies</strong>, <strong>load balancers</strong> & <strong>URL mapping</strong>).<br>
-                                        Comfortable popular web servers (<strong>Nginx</strong>, <strong>NodeJS</strong> & <strong>Apache</strong> .)
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="skill row">
-                                    <div class="columns small-3">{{> progressBar number="0.85"}}</div>
-                                    <div class="columns small-9 relative">
-                                        <h4>Databases</h4>
-                                        <p>
-                                        Strong foundation in <strong>SQL</strong> in various flavours. Active <strong>Cypher</strong> User. Proficient in numerous <strong>ORMs</strong> & <strong>ODMs</strong> in JS & PHP. <br>
-                                        Vast DB exposure (including <strong>MySQL</strong>, <strong>MongoDB</strong>, <strong>Neo4j</strong> etc). Very interested in Big Data & Data Analytics.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="skill row">
-                                    <div class="columns small-3">{{> progressBar number="0.85"}}</div>
-                                    <div class="columns small-9 relative">
-                                        <h4>Cloud Services</h4>
-                                        <p>
-                                        Succesfully deployed multitier server configurations in <strong>AWS</strong>,
-                                        <strong>Microsoft Azure</strong> & <strong>Digital Ocean</strong>. Created & maintained Auto-Scale set ups, Load Balancings & Monitoring Apps.
-                                        <strong>Ubuntu Desktop</strong> User but comfortable with all Linux flavours including <strong>CentOS</strong>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        {{> skills}}
                         </section>
                     </div>
                     <div id="employmentblock" class="pageBreak">
@@ -193,21 +126,3 @@
         {{> interactiveButton}}
         {{> setup}}
     </body>
-    <template name="interactiveButton">
-        <div class="md-modal md-effect-19" id="interactiveModal">
-            <div class="md-content">
-                <h3>This page is interactive.</h3>
-                <div>
-                    <p class="lead">Hover over or touch items to reveal more information.</p>
-                    <p>
-                    I created this because I felt that there was very little one can visualise on paper. This website works in all devices but is very much work in progress. Check back for updates as I fill up my portfolio with more media! I hope you enjoy exploring as much
-                    as I did creating. :)
-                    </p>
-                    <button class="md-close">Close me!</button>
-                </div>
-            </div>
-        </div>
-    </template>
-    <template name="setup">
-        <div class="md-overlay"></div>
-    </template>
